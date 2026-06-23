@@ -9,14 +9,8 @@
     programs.gamemode.enable = true;
 
     environment.systemPackages = with pkgs; [
-        protonup-ng
         mangohud
         gamescope
     ];
-
-    environment.sessionVariables = {
-        STEAM_EXTRA_COMPAT_TOOLS_PATHS =
-            "/home/otter/.steam/root/compatibilitytools.d";
-    };
 
 }
