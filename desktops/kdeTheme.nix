@@ -9,7 +9,7 @@ let
       owner = "vinceliuice";
       repo = "MacTahoe-kde";
       rev = "main";
-      hash = pkgs.lib.fakeHash;
+      hash = "sha256-6saJ9t1KZeIkCwR6ePKSnJxSsba0XRmck8g8/JDuuBE=";
     };
 
     installPhase = ''
