@@ -14,4 +14,9 @@
         gamescope
     ];
 
+    environment.sessionVariables = {
+        STEAM_EXTRA_COMPAT_TOOLS_PATHS =
+            "/home/otter/.steam/root/compatibilitytools.d";
+    };
+
 }
