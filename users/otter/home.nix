@@ -6,7 +6,20 @@
   programs.fetch = {
     enable = true;
     labelColor = "red";
-    info = [];
+    info = [
+      "os"
+      "host"
+      "kernal"
+      "uptime"
+      "packages"
+      "shell"
+      "wm"
+      "cpu"
+      "gpu"
+      "memory"
+      "swap"
+      "disk"
+    ];
     speed = 1.0;
     spin = "xy";
   };
