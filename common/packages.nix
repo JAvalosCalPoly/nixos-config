@@ -3,11 +3,21 @@
 
 {
   environment.systemPackages = with pkgs; [
-    neovim
-    wget
     git
-    sl
+    wget
+    neovim
+
+    # diagnostics
     pciutils
+    usbutils
+    lshw
+
+    # filesystem/tools
+    tree
+    unzip
+    zip
+
+    # nix development
     nil
     nixfmt
   ];
