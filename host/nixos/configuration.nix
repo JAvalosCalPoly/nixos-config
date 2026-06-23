@@ -12,6 +12,7 @@
     ../../desktops/kde.nix
     ../../desktops/kdeTheme.nix
     ../../desktops/audio.nix
+    ../../desktops/games.nix
     ../../desktops/printing.nix
 
     ../../hardware/amd/cpu.nix
