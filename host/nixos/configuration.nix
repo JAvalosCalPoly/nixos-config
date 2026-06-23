@@ -10,6 +10,7 @@
     ../../common/programs.nix
 
     ../../desktops/kde.nix
+    ../../desktops/kdeTheme.nix
     ../../desktops/audio.nix
     ../../desktops/printing.nix
 
