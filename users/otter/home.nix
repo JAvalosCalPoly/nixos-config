@@ -1,6 +1,16 @@
 { config, pkgs, ... }:
 
 {
+  imports = [ inputs.areofyl-fetch.homeManagerModules.default ];
+
+  programs.fetch = {
+    enable = true;
+    labelColor = "red";
+    info = [];
+    speed = 1.0;
+    spin = "xy";
+  };
+
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "otter";

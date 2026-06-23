@@ -8,6 +8,8 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    areofyl-fetch.url = "github:areofyl/fetch";
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs:
