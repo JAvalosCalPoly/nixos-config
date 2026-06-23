@@ -9,7 +9,7 @@
     info = [
       "os"
       "host"
-      "kernal"
+      "kernel"
       "uptime"
       "packages"
       "shell"
