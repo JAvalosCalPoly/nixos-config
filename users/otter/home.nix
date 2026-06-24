@@ -56,6 +56,8 @@
     protonup-ng
     easyeffects
     discord
+    nerd-fonts.sauce-code-pro
+
     (pkgs.writeShellScriptBin "my-hello" ''
       echo "Hello, ${config.home.username}!"
     '')
@@ -99,7 +101,7 @@
   # or
   #
   #  /etc/profiles/per-user/otter/etc/profile.d/hm-session-vars.sh
-  #
+  #d
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
