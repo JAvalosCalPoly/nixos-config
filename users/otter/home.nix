@@ -45,6 +45,7 @@
     vlc
     imv
     protonup-ng
+    easyeffects
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello
@@ -62,6 +63,9 @@
     #   echo "Hello, ${config.home.username}!"
     # '')
   ];
+
+  # So easyeffects can run in the background
+  services.easyeffects.enable = true;
 
   home.sessionVariables = {
       STEAM_EXTRA_COMPAT_TOOLS_PATHS =
