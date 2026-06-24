@@ -23,6 +23,15 @@
     spin = "xy";
   };
 
+  # fihhhhhh
+  programs.fish = {
+    enable = true;
+
+    shellAliases = {
+      rebuild = "sudo nixos-rebuild switch --flake /etc/nixos#default";
+    };
+  };
+
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "otter";

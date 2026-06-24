@@ -54,6 +54,8 @@
     isNormalUser = true;
     description = "Otter";
     extraGroups = [ "networkmanager" "wheel" ];
+
+    shell = pkgs.fish;
   };
 
   home-manager = {
