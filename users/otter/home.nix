@@ -26,6 +26,46 @@
   programs.starship = {
     enable = true;
     enableFishIntegration = true;
+
+    settings = {
+      add_newline = true;
+
+      format = ''
+        $username$hostname$directory
+        $character
+      '';
+
+      username = {
+        show_always = true;
+        style_user = "green";
+        format = "[$user]($style)";
+      };
+
+      hostname = {
+        ssh_only = false;
+        disabled = false;
+        style = "cyan";
+        format = " at [$hostname]($style)";
+      };
+
+      directory = {
+        style = "yellow";
+        format = " in [$path]($style) ";
+        truncate_to_repo = false;
+        truncation_length = 0;
+      };
+
+      character = {
+        success_symbol = "[↳](white) ";
+        error_symbol = "[↳](red) ";
+      };
+
+      git_branch.disabled = true;
+      git_status.disabled = true;
+      git_commit.disabled = true;
+      git_state.disabled = true;
+      git_metrics.disabled = true;
+    };
   };
 
 
