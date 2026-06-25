@@ -23,14 +23,59 @@
     spin = "xy";
   };
 
-  # fihhhhhh
-  programs.fish = {
-    enable = true;
+programs.fish = {
+  enable = true;
 
-    shellAliases = {
-      rebuild = "sudo nixos-rebuild switch --flake /etc/nixos#default";
-    };
+  shellAliases = {
+    rebuild = "sudo nixos-rebuild switch --flake /etc/nixos#default";
   };
+
+  functions = {
+    extract = ''
+      if test (count $argv) -eq 0
+        echo "Usage: extract <archive>"
+        return 1
+      end
+
+      set file $argv[1]
+
+      if not test -f "$file"
+        echo "'$file' is not a valid file"
+        return 1
+      end
+
+      switch "$file"
+        case "*.tar.gz" "*.tgz"
+          tar xzf "$file"
+        case "*.tar.bz2" "*.tbz2"
+          tar xjf "$file"
+        case "*.tar.xz" "*.txz"
+          tar xJf "$file"
+        case "*.tar.zst" "*.tzst"
+          tar --zstd -xf "$file"
+        case "*.tar"
+          tar xf "$file"
+        case "*.zip"
+          unzip "$file"
+        case "*.7z"
+          7z x "$file"
+        case "*.rar"
+          unrar x "$file"
+        case "*.gz"
+          gunzip "$file"
+        case "*.bz2"
+          bunzip2 "$file"
+        case "*.xz"
+          unxz "$file"
+        case "*.zst"
+          unzstd "$file"
+        case "*"
+          echo "Don't know how to extract '$file'"
+          return 1
+      end
+    '';
+  };
+};
 
   # Home Manager needs a bit of information about you and the paths it should
   # manage.

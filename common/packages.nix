@@ -20,5 +20,11 @@
     # nix development
     nil
     nixfmt
+
+    # extract utilities
+    unzip
+    p7zip
+    unrar
+    zstd
   ];
 }
