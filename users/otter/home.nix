@@ -102,6 +102,7 @@ programs.fish = {
     easyeffects
     discord
     nerd-fonts.sauce-code-pro
+    nerd-fonts.jetbrains-mono
 
     (pkgs.writeShellScriptBin "my-hello" ''
       echo "Hello, ${config.home.username}!"
