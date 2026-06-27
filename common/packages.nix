@@ -17,6 +17,7 @@
     unzip
     zip
     appimage-run
+    file
 
     # nix development
     nil
