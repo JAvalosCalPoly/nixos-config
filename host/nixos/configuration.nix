@@ -33,7 +33,10 @@
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
   networking.hostName = "nixos";
-  networking.networkmanager.enable = true;
+    networking.networkmanager = {
+    enable = true;
+    wifi.powersave = false;
+  };
 
   time.timeZone = "America/Los_Angeles";
 
