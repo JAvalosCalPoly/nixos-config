@@ -11,6 +11,7 @@
     environment.systemPackages = with pkgs; [
         mangohud
         gamescope
+        rpcs3
     ];
 
 }
