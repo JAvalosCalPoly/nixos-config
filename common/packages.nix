@@ -16,6 +16,7 @@
     tree
     unzip
     zip
+    appimage-run
 
     # nix development
     nil
